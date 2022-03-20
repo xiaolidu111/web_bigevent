@@ -30,6 +30,7 @@ function getUserInfo(){
                 return layui.layer.msg(res.message)
             }
             // 调用函数渲染用户头像
+            console.log(1);
             renderAvatar(res.data);
         },
         // 不论成功还是失败,都会调用complete函数
