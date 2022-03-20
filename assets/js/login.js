@@ -60,7 +60,7 @@ $(function(){
     // 监测登录表单的提交事件
     $('#form_login').submit(function(e){
         e.preventDefault();
-        
+        console.log('1');
         $.ajax({
             method:'POST',
             url:'/api/login',
@@ -74,7 +74,8 @@ $(function(){
                 // 将登录成功之后得到的token字符串存在localstorege里面
                 localStorage.setItem('token',res.token)
                 // 跳转到后台首页
-                location.href = '/index.html'
+                // console.log(location.href);
+                location.href = '/codee/index.html'
             }
         })
     })
